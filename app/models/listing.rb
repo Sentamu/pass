@@ -1,4 +1,4 @@
-class Listing < ActiveRecord::Base
+ class Listing < ActiveRecord::Base
 
 	if Rails.env.production?
 		           has_attached_file :image,:styles => { :medium => "350x500", :thumb => "100x100>" }, :default_url => "img.jpg",
