@@ -1,0 +1,25 @@
+ <div class="container caption center">
+ <div class="row">
+ <% @kistings.each do |kisting| %>
+ <div class="col-xs-6 col-md-4">
+   <div class="thumbnail nnx">
+    <%= link_to image_tag(kisting.image.url), kisting %>
+
+   
+        
+        
+        <% kisting.description %>
+        
+        <% link_to 'Show', kisting %>
+        <% link_to 'Edit', edit_kisting_path(kisting) %>
+        <% link_to 'Destroy', kisting, method: :delete, data: { confirm: 'Are you sure?' } %>
+   
+       
+  </div>
+
+ <h4><%= kisting.name %></h4>
+
+  </div>
+<% end %>
+</div>
+</div>
